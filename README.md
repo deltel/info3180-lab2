@@ -9,3 +9,8 @@ $ source venv/bin/activate (or .\venv\Scripts\activate on Windows)
 $ pip install -r requirements.txt 
 $ python run.py
 ```
+
+# STARTED
+Started the profile template
+Need to style it
+Need to finish the profile function in views.py

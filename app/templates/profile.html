@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{%  block main %}
+
+<div class="profile">
+    <div class="profile-container">
+        <div id="top-half">
+            <img src="{{ url_for('static', filename='profile-pic.jpg') }}" alt="Profile picture of Delano Francis">
+            <h1>{{ info['name'] }}</h1>
+            <p>{{ info['username'] }}</p>
+            <p>{{ info['location'] }}</p>
+            <p>Joined {{ info['date'] }}</p>
+
+        </div>
+
+        <div id="bottom-half">
+            <div class="p">
+                <p>{{ info['bio'] }}</p>
+            </div>
+            <div id="stats">
+                <div class="stats1"><span class="number">{{ info['numPosts'] }}</span> <br> Posts</div>
+                <div class="stats2"><span class="number">{{ info['numFollowing'] }}</span> <br> Following</div>
+                <div class="stats3"><span class="number">{{ info['numFollowers'] }}</span> <br> Followers</div>
+            </div>
+
+            <button class="follow">Follow</button>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
